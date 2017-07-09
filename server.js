@@ -2,9 +2,6 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
-// we set up the env PORT that Heroku will set automatically, we have
-// also made it to where we set the port to 3000 if Heroku has not set
-// this variable. (as in, we are running it locally)
 const port = process.env.PORT || 3000;
 var app = express();
 
@@ -68,7 +65,3 @@ app.get('/bad', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 });
-
-// CHALLENGE
-
-//  9. Once it's working on localhost:3000, make the commit, push up to github, then push up to heroku using the heroku remote
