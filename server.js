@@ -52,6 +52,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         statuscode: 404,
@@ -62,3 +68,7 @@ app.get('/bad', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 });
+
+// CHALLENGE
+
+//  9. Once it's working on localhost:3000, make the commit, push up to github, then push up to heroku using the heroku remote
